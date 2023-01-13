@@ -1,9 +1,0 @@
-게임-> 장면-> 오브젝트(플레이어, 몬스터등)-> 스크립트
-
-What is programming language??
-programming = programming is a language for communicate with computer.
-
-Computer use only 0,1 for commuication. But it is very hard for human to use only 0,1 to coummunicate with computer. So to solve this problem
-programming language is made. 
-
-There are so many programming language such as c,c++,Java and more. But Unity use c# language to make a game.
