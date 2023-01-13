@@ -1,0 +1,13 @@
+Goal: print hello world in console window
+
+1.make C# script
+
+2.Debug.Log();-> using Debug.Log();, we can print message in console window.
+
+3.After coding save the script(Ctrl+s).
+
+4.Give the script to object and drag it to inspector window.
+
+5.Press play button.
+
+6.You can see the message in console window.

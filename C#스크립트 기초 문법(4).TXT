@@ -1,0 +1,171 @@
+Basic grammer of C# language.
+
+1.Variable: location to save a data in memory.
+1)int - int type is for saving the integer datas.
+2)float - float type is for saving the real number.
+3)string - string data
+4)bool - bool data type is for saving true or false.
+
+First thing you have to do is giving data type and declare the name of variable. And then give the data to initialize the Variable.
+
+2.Grouping Variable(Coding Variable) - Grouping Variable is to sort data within a data files.
+
+//string[] monsters = { "슬라임", "사막뱀", "악마" };
+int[] monsterLevel1 = new int[3];
+monsterLevel1[0] = 1;
+monsterLevel1[1] = 6;
+monsterLevel1[2] = 20;
+Debug.Log("맵에 존재하는 몬스터");
+Debug.Log(monsterLevel1[0]);
+Debug.Log(monsterLevel1[1]);
+Debug.Log(monsterLevel1[2]);
+
+
+//List: function added for changeable in grouptype Variable
+List<type> items = new List<type>();
+ex)
+List<string> items = new List<string>();
+items.Add("생명물약30");
+items.Add("마나물약30");
+
+Debug.Log("가지고 있는 아이템");
+Debug.Log(items[0]);
+Debug.Log(items[1]);
+
+items.RemoveAt(0);  //removing 0 object in the items list.
+
+Debug.Log("가지고 있는 아이템");
+Debug.Log(items[0]); 
+//Debug.Log(items[1]);  it make error because when index 0 is removed, 마나물약30 index becomes 0 and 생명물약30 removes.
+
+3. Operating
+int exp = 1500;
+exp = 1500+ 320;
+exp = exp - 10;
+level = exp / 300;
+strength = level * 3.1f;
+
+ int nextExp = 300 - (exp % 300);
+Debug.Log("다음 레벨까지 남은 경험치는?");
+Debug.Log(nextExp);
+
+string title = "전설의";
+Debug.Log("용사의 이름은?");
+Debug.Log(title + playerName);
+
+int fullLevel = 99;
+isFullLevel = level == fullLevel;
+Debug.Log("용사는 만렙입니까?" + isFullLevel);  //출력: 용사는 만렙입니까? False
+
+bool isEndTutorial = level > 10;
+Debug.Log("튜토리얼이 끝난 용사입니까? " + isEndTutorial); //출력: 튜토리얼이 끝난 용사입니까? False
+
+int health = 30;
+int mana = 25;
+bool isBadCondition = health <= 50 && mana <= 20; // && is AND operation
+Debug.Log("용사의 상태가 나쁩니까? " + isBadCondition);
+
+isBadCondition = health <= 50 || mana <= 20; // || is OR operation
+Debug.Log("용사의 상태가 나쁩니까? " + isBadCondition);
+
+string condition = isBadCondition ? "나쁨" : "좋음";  // ? true: false ----> ternary operator
+Debug.Log("용사의 상태가 나쁩니까? " + condition);
+
+
+4.keywords - keywords are predefined, reserved identifiers that have special meanings to the compiler. So keywards can't be used as Variable names.
+ex) int, float, string and more.
+
+5.conditions
+1)If statements
+if(true)
+{
+    Debug.Log("hello");
+}
+else
+{
+    Debug.Log("hello in else statement");
+}
+
+2)switch statement
+switch (monsters[1])
+{
+    case "슬라임":
+        Debug.Log("소형 몬스터가 출현!");
+        break;
+     case "사막뱀":
+         Debug.Log("중형 몬스터가 출현!");
+         break;
+      case "악마":
+         Debug.Log("대형 몬스터가 출현!");
+         break;
+      default:
+          Debug.Log("There is no monsters.");
+          break;
+}
+
+//6.iteration
+while( health > 0) {
+            health--;
+            if (health > 0)
+            {
+                Debug.Log("독 데미지를 입었습니다." + health);
+            }
+            else
+                Debug.Log("사망하였습니다.");
+            if(health == 10){
+                Debug.Log("해독제를 사용합니다.");
+                break;
+            }
+            for (int count = 0; count < 10; count++)
+            {
+                health++;
+                Debug.Log("붕대로 치료 중....." + health);
+            }
+            //.Length(Array) .Count(List)
+            for (int index = 0; index < monsters.Length; index++)
+            {
+                Debug.Log("이 지역에 있는 몬스터"+ monsters[index]);
+            }
+
+	//foreach is uesd to find a Char in a string and also it can be used to check whether a certain character is present in a given string.
+            foreach(string monster in monsters)
+            {
+                Debug.Log("이 지역에 있는 몬스터 : " + monster); 
+            }
+}
+
+//7.function(method)
+
+int health = Heal(health);
+
+int Heal(int currentHealth)
+{
+    currentHealth += 10;
+    Debut.Log("힐을 받았습니다." + currentHealth);
+    return currentHealth;
+}
+
+//8.class
+public class Actor {
+    public int id;
+    public string name;
+    public string title;
+    public string weapon;
+    public float strength;
+    public int level;
+
+    string Talk()
+    {
+        return "대화를 걸었습니다.";
+    }
+
+    string HasWeapon()
+    {
+        return weapon;
+    }
+
+    void LevelUp()
+    {
+        level = level + 1;
+    }
+}
