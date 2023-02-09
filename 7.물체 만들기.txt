@@ -1,0 +1,25 @@
+물체 만들기의 각 컴포넌트
+물체의 필수 요소: Mesh, Material, Collider, RigidBody
+1.Collider:물리효과를 받기 위한 컴포넌트 이며 충돌 범위(기준)를 설정하는 컴포넌트, 없으면 다른 물체와 충돌을 일으키지 않는다.
+
+2.RigidBody: 중력 물리효과를 받기 위한 컴포넌트
+rigidBody>Mass: Mass 수치가 높을수록 총돌이 무거워짐.
+rigidBody>Use Gravity:  Use Gravity로 중력 받는지를 결정.
+rigidBody>Is Kinematic: Is Kinematic는 중력, 충돌등 외부 물리 효과를 받지 않는다. 스크립트로만 물리 효과를 줄 수 있다. 즉, 장애물 만들때 유용하다. 
+
+3.재질 만들기 
+재질 생성:Create>Material
+Material>Metalic: 금속 재질 수치. 즉, 높을 수록 더 금속 재질인 것 처럼 보인다.
+Material>Smoothness: 빛 반사 수치. 값이 높아질 수록 반사가 커진다. 
+Material>Tiling: 텍스쳐 반복 타일 개수
+Material>Emission: 텍스처 발광(밝기) 조절
+
+4.물리 재질 만들기
+Physicis Material:탄성과 마찰을 다루는 물리적인 재질.
+Physicis Material은 Collider안에 들어간다. 
+Bounciness: 탄성력, 높을수록 많이 튀어오름.(최대값은 1)
+Bounciness Combine: 다음 탄성을 계산하는 방식.
+Friction:마찰력, 낮을수록 많이 미끄러짐.
+1)Dynamic Fricition: 오브젝트가 움직이면서 마찰하는 정도
+2)Static Friction: 고정 위치에서 오브젝트가 이동하기 위해 가해야 하는 힘의 크기.
+*Friction 합산은 최소로, Bounciness  합산은 최대로!
