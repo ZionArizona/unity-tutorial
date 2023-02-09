@@ -357,6 +357,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Actor.cs"
 "Assets/LifeCycle.cs"
+"Assets/lifeCycle_keyboard.cs"
+"Assets/Move.cs"
+"Assets/ObjectMove.cs"
 "Assets/print_helloWorld.cs"
 "Assets/Variable.cs"
 -langversion:9.0
