@@ -356,11 +356,16 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Actor.cs"
+"Assets/Click.cs"
 "Assets/LifeCycle.cs"
 "Assets/lifeCycle_keyboard.cs"
 "Assets/Move.cs"
+"Assets/MyBall.cs"
+"Assets/ObjectCollision.cs"
 "Assets/ObjectMove.cs"
+"Assets/OnTrigger.cs"
 "Assets/print_helloWorld.cs"
+"Assets/TTT.cs"
 "Assets/Variable.cs"
 -langversion:9.0
 
